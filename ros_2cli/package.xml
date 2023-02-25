@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>ros_2cli</name>
+  <version>0.0.0</version>
+  <description>Brand-compliant 'ROS 2' and 'ROS 1'/'ROS' command aliases.</description>
+  <maintainer email="bedard.christophe@gmail.com">Christophe Bedard</maintainer>
+  <license>Apache 2.0</license>
+  <url type="website">https://github.com/christophebedard/ros-2cli</url>
+  <url type="repository">https://github.com/christophebedard/ros-2cli</url>
+  <url type="bugtracker">https://github.com/christophebedard/ros-2cli/issues</url>
+  <author email="bedard.christophe@gmail.com">Christophe Bedard</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Copyright 2023 Christophe Bedard
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Brand-compliant command aliases for ROS 2 and ROS 1.
+# See README.md
+
+# If there are no arguments, error out
+if [ $# -eq 0 ]; then
+  exit 1
+fi
+
+# If the first argument isn't '2', then the command is for ROS 1
+if [ $1 != "2" ]; then
+  # If the first argument is '1', remove it
+  if [ $1 = "1" ]; then
+    shift
+  fi
+  # ROS 1 command verbs are just standalone commands (e.g., rostopic, rosrun, etc.)
+  "ros$@"
+  exit 0
+fi
+
+# Otherwise, it's for ROS 2: call 'ros2' with everything after the first argument ('2')
+ros2 ${@:2}
