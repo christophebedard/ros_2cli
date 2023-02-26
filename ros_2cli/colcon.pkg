@@ -1,0 +1,6 @@
+{
+    "hooks": [
+        "share/ros_2cli/environment/ROS-argcomplete.bash",
+        "share/ros_2cli/environment/ROS-argcomplete.zsh"
+    ]
+}

@@ -1,15 +1,36 @@
 # ros_2cli
 
-Brand-compliant `ROS 2` annd `ROS 1`/`ROS` command aliases.
+Brand-compliant `ROS 2` and `ROS 1` command aliases.
 See [shouldiputaspacebetweenrosand2.com](https://shouldiputaspacebetweenrosand2.com/).
 
 | Command... | ...calls | Example... | ...calls |
 |:--------|:------|:--------|:--------------|
 | `ROS 2 ...` | `ros2 ...` | `ROS 2 topic list` | `ros2 topic list` |
 | `ROS 1 ...` | `ros...`   | `ROS 1 topic list` | `rostopic list`   |
-| `ROS ...`   | `ros...`   | `ROS topic list`   | `rostopic list`   |
 
-Lowercase `ros` is also supported.
+The `ROS 2` command alias supports autocompletion:
+
+```sh
+$ ROS <tab>
+1 2 -h --help
+$ ROS 2 <tab>
+action                          interface                       run
+bag                             launch                          security
+component                       lifecycle                       service
+daemon                          multicast                       topic
+doctor                          node                            --use-python-default-buffering
+extension_points                param                           wtf
+extensions                      pkg
+$ ROS 2 topic <tab>
+bw                       hz                       pub
+delay                    --include-hidden-topics  type
+echo                     info                     
+find                     list
+$ ROS 2 topic list
+/email
+/parameter_events
+/rosout
+```
 
 ## How to use
 
@@ -18,7 +39,7 @@ Lowercase `ros` is also supported.
 1. Clone package into your workspace
    ```sh
    $ cd ~/ws/src
-   $ git clone https://github.com/christophebedard/ros-2cli.git
+   $ git clone https://github.com/christophebedard/ros_2cli.git
    ```
 1. Build package
    ```sh

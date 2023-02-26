@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-# Copyright 2023 Christophe Bedard
+# Copyright 2017-2018 Open Source Robotics Foundation, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,5 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Just call the main script
-ROS $@
+if (( ! ${+_comps} )); then
+  autoload -U +X compinit && compinit
+fi
+autoload -U +X bashcompinit && bashcompinit
+
+# Get this scripts directory
+__ros_2cli_completion_dir=${0:a:h}
+# Just source the bash version, it works in zsh too
+source "$__ros_2cli_completion_dir/ROS-argcomplete.bash"
+# Cleanup
+unset __ros_2cli_completion_dir

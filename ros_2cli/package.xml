@@ -3,17 +3,23 @@
 <package format="3">
   <name>ros_2cli</name>
   <version>0.1.0</version>
-  <description>Brand-compliant 'ROS 2' and 'ROS 1'/'ROS' command aliases.</description>
+  <description>Brand-compliant 'ROS 2' and 'ROS 1' command aliases with autocompletion support.</description>
+
   <maintainer email="bedard.christophe@gmail.com">Christophe Bedard</maintainer>
+
   <license>Apache 2.0</license>
+
   <url type="website">https://github.com/christophebedard/ros-2cli</url>
   <url type="repository">https://github.com/christophebedard/ros-2cli</url>
   <url type="bugtracker">https://github.com/christophebedard/ros-2cli/issues</url>
+
   <author email="bedard.christophe@gmail.com">Christophe Bedard</author>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ros2cli</depend>
+
+  <exec_depend>python3-argcomplete</exec_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <build_type>ament_python</build_type>
   </export>
 </package>
