@@ -12,17 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from argcomplete import autocomplete
 import argparse
 import os
 import subprocess
 import sys
 
-from ros2cli.command import _is_completion_requested
+from argcomplete import autocomplete
+
 from ros2cli import cli
+from ros2cli.command import _is_completion_requested
 
 
-def main():
+def main() -> int:
     # Overall, the trick to make this work is to remove '2' from the command in autocompletion mode
     # and in normal command/execution mode (but not both at the same time) and relay both
     # autocompletion and command execution to ros2cli

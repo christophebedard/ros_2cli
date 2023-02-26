@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='ros_2cli',
     version='0.1.0',
-    packages=find_packages(),
+    packages=find_packages(exclude=['test']),
     extras_require={
         'completion': ['argcomplete'],
     },
@@ -40,6 +40,7 @@ setup(
 This package provides 'ROS 2' and 'ROS 1' command aliases for ROS brand compliance.
 The 'ROS 2' command alias supports autocompletion.""",
     license='Apache License, Version 2.0',
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'ROS = ros_2cli.cli:main',
