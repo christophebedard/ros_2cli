@@ -2,8 +2,8 @@
 Changelog for package ros_2cli
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2023-02-26)
+------------------
 * Switch to Python implementation based on ros2cli for autocompletion
 * Contributors: Christophe Bedard
 
