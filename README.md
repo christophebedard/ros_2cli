@@ -34,8 +34,6 @@ $ ROS 2 topic list
 
 ## How to use
 
-### From source
-
 1. Clone package into your workspace
    ```sh
    $ cd ~/ws/src
@@ -56,7 +54,3 @@ $ ROS 2 topic list
    $ ROS 1 topic list
    $ # etc.
    ```
-
-### Binary install
-
-Coming soon!
