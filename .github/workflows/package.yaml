@@ -1,0 +1,17 @@
+name: Package
+on:
+  # TODO remove this line
+  pull_request:
+  push:
+    branches:
+      - rolling
+jobs:
+  deb:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: jspricke/ros-deb-builder-action@main
+        with:
+          DEB_DISTRO: jammy
+          ROS_DISTRO: rolling
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          SQUASH_HISTORY: true
