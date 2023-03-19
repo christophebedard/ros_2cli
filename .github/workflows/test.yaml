@@ -1,0 +1,24 @@
+name: Build
+on:
+  pull_request:
+  push:
+    branches:
+      - rolling
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            distro: rolling
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ros-tooling/setup-ros@master
+      with:
+        required-ros-distributions: ${{ matrix.distro }}
+        use-ros2-testing: true
+    - uses: ros-tooling/action-ros-ci@master
+      with:
+        package-name: ros_2cli
+        target-ros2-distro: ${{ matrix.distro }}
