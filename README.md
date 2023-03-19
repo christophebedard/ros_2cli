@@ -34,6 +34,8 @@ $ ROS 2 topic list
 
 ## How to use
 
+### Build from source
+
 1. Clone package into your workspace
    ```sh
    $ cd ~/ws/src
@@ -47,6 +49,32 @@ $ ROS 2 topic list
 1. Source
    ```sh
    $ source install/setup.bash
+   ```
+1. Use commands
+   ```sh
+   $ ROS 2 run pkg exe
+   $ ROS 1 topic list
+   $ # etc.
+   ```
+
+### Install binary
+
+For ROS 2 Rolling on Ubuntu 22.04:
+
+1. Add this GitHub repository as an `apt` and `rosdep` repository and update
+   ```sh
+   $ echo "deb [trusted=yes] https://raw.githubusercontent.com/christophebedard/ros_2cli/jammy-rolling/ ./" | sudo tee /etc/apt/sources.list.d/christophebedard_ros_2cli.list
+   $ echo "yaml https://raw.githubusercontent.com/christophebedard/ros_2cli/jammy-rolling/local.yaml rolling" | sudo tee /etc/ros/rosdep/sources.list.d/1-christophebedard_ros_2cli.list
+   $ sudo apt-get update
+   $ rosdep update
+   ```
+1. Install `ros_2cli`
+   ```sh
+   $ sudo apt-get install -y ros-rolling-ros-2cli
+   ```
+1. Source
+   ```sh
+   $ source /opt/ros/rolling/setup.bash
    ```
 1. Use commands
    ```sh
