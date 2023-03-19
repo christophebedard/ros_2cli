@@ -1,0 +1,17 @@
+Package: ros-rolling-ros-2cli
+Architecture: amd64
+Version: 0-2023.03.19.17.22
+Priority: optional
+Section: misc
+Maintainer: Christophe Bedard <bedard.christophe@gmail.com>
+Installed-Size: 43
+Depends: python3-argcomplete, ros-rolling-ros2cli
+Filename: ./ros-rolling-ros-2cli_0-2023.03.19.17.22_amd64.deb
+Size: 5772
+MD5sum: fc65291d48aa52f81f9b7e9ebea1c0e9
+SHA1: 3073f59aa644e0e3a39a0ea82671542be82f6722
+SHA256: f0e00f765af63e0274a4344ff56524a00369e2825b73191d96ca881204a6e66d
+SHA512: c690fb17366c2cb581a2e36075bffa9725b223438be07567001937ea9806fc6c3ca950289471e937cd70d9f6fece9ebd4ffe878514fd0389e15c192c9fc9b1d8
+Homepage: https://github.com/christophebedard/ros-2cli
+Description: Brand-compliant 'ROS 2' and 'ROS 1' command aliases with autocompletion support.
+

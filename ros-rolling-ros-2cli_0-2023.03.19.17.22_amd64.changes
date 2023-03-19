@@ -1,0 +1,27 @@
+Format: 1.8
+Date: Sun, 26 Feb 2023 00:00:00 -0000
+Source: ros-rolling-ros-2cli
+Binary: ros-rolling-ros-2cli
+Built-For-Profiles: noudeb
+Architecture: amd64
+Version: 0-2023.03.19.17.22
+Distribution: jammy
+Urgency: high
+Maintainer: Christophe Bedard <bedard.christophe@gmail.com>
+Changed-By: Christophe Bedard <bedard.christophe@gmail.com>
+Description:
+ ros-rolling-ros-2cli - Brand-compliant 'ROS 2' and 'ROS 1' command aliases with autocomp
+Changes:
+ ros-rolling-ros-2cli (0-2023.03.19.17.22) jammy; urgency=high
+ .
+   * Switch to Python implementation based on ros2cli for autocompletion
+   * Contributors: Christophe Bedard
+Checksums-Sha1:
+ 0bd6d98ade1537ecba7a788d516c976b93d0f826 14723 ros-rolling-ros-2cli_0-2023.03.19.17.22_amd64.buildinfo
+ 3073f59aa644e0e3a39a0ea82671542be82f6722 5772 ros-rolling-ros-2cli_0-2023.03.19.17.22_amd64.deb
+Checksums-Sha256:
+ 6d35b48af42ddc972f005539dec9928489fcd79385caf72f94c3a80728c30430 14723 ros-rolling-ros-2cli_0-2023.03.19.17.22_amd64.buildinfo
+ f0e00f765af63e0274a4344ff56524a00369e2825b73191d96ca881204a6e66d 5772 ros-rolling-ros-2cli_0-2023.03.19.17.22_amd64.deb
+Files:
+ e6be5307ed6922b8cfe2d54425991409 14723 misc optional ros-rolling-ros-2cli_0-2023.03.19.17.22_amd64.buildinfo
+ fc65291d48aa52f81f9b7e9ebea1c0e9 5772 misc optional ros-rolling-ros-2cli_0-2023.03.19.17.22_amd64.deb
